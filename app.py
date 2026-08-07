@@ -561,11 +561,11 @@ def enroll_face():
 def not_found(e):
     return render_template("404.html"), 404
 
+import os
 
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
         port=int(os.environ.get("PORT", 10000)),
-        debug=False,
-        threaded=True
-    )0.0.0.0", port=5000, debug=False)
+        debug=False
+    )
