@@ -563,5 +563,9 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-   # app.run(host=config.HOST, port=config.PORT, debug=config.DEBUG, threaded=True, use_reloader=False)
-   app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 10000)),
+        debug=False,
+        threaded=True
+    )0.0.0.0", port=5000, debug=False)
